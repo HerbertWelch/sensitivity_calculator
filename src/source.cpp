@@ -157,7 +157,7 @@ static ssize_t handle_policy_update(struct file *file,
         if (_setid_policy_lookup(pol, rule->src_id, rule->dst_id) == SIDPOL_ALLOWED) {
             pr_warn("bad policy: duplicate entry\n");
             err = -EEXIST;
-            goto out_free_rule;
+            goto    out_free_rule;
         }
 
         insert_rule(pol, rule);
