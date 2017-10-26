@@ -179,7 +179,7 @@ out_free_rule:
         mutex_unlock(&uid_policy_update_lock);
     } else if (policy_type == GID) {
         mutex_lock(&gid_policy_update_lock);
-        pol = rcu_replace_pointer(safesetid_setgid_rules, pol,
+            pol = rcu_replace_pointer(safesetid_setgid_rules, pol,
                       lockdep_is_held(&gid_policy_update_lock));
         mutex_unlock(&gid_policy_update_lock);
     } else {
