@@ -183,7 +183,7 @@ out_free_rule:
                       lockdep_is_held(&gid_policy_update_lock));
         mutex_unlock(&gid_policy_update_lock);
     } else {
-        pr_warn("error: bad policy type");
+          pr_warn("error: bad policy type");
     }
     err = len;
 
