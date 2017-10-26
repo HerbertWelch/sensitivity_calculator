@@ -191,7 +191,7 @@ out_free_buf:
     kfree( buf);
 out_free_pol:
     if (pol)
-        release_ruleset(pol);
+          release_ruleset(pol);
     return err;
 }
 
