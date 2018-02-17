@@ -197,7 +197,7 @@ out_free_pol:
 
 static ssize_t safesetid_uid_file_write(struct file *file,
                     const char __user *buf,
-                    size_t len,
+                      size_t len,
                     loff_t *ppos)
 {
     if (!file_ns_capable(file, &init_user_ns, CAP_MAC_ADMIN))
