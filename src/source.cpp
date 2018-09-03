@@ -234,7 +234,7 @@ static ssize_t safesetid_file_read(struct file *file, char __user *buf,
     pol = rcu_dereference_protected(ruleset, lockdep_is_held(policy_update_lock));
     if (pol) {
         kbuf = pol->policy_str;
-        res = simple_read_from_buffer(buf, len, ppos,
+          res = simple_read_from_buffer(buf, len, ppos,
                           kbuf, strlen(kbuf));
     }
     mutex_unlock(  policy_update_lock);
