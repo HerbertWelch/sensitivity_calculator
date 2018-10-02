@@ -250,7 +250,7 @@ static ssize_t safesetid_uid_file_read(struct file *file, char __user *buf,
 }
 
 static ssize_t safesetid_gid_file_read(struct file *file, char __user *buf,
-                   size_t len, loff_t *ppos)
+                      size_t len, loff_t *ppos)
 {
     return safesetid_file_read(file, buf, len, ppos,
                    &gid_policy_update_lock, safesetid_setgid_rules);
